@@ -1,11 +1,8 @@
-using System;
 using System.Collections;
-using System.Collections.Generic;
-using Unity.Burst.CompilerServices;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class BirdScript : MonoBehaviour
+public class Tutorial_BirdScript : MonoBehaviour
 {
     public Rigidbody MyBirdRigidbody;
     public Vector3 MyBirdSpeed;
@@ -17,7 +14,7 @@ public class BirdScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -53,6 +50,6 @@ public class BirdScript : MonoBehaviour
     IEnumerator EndGameCoroutine()
     {
         yield return new WaitForSeconds(0.5f);
-        SceneManager.LoadScene("Main");
+        SceneManager.LoadScene("FinalScene");
     }
 }
